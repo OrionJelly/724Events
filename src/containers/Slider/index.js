@@ -5,15 +5,15 @@ import { getMonth } from "../../helpers/Date";
 import "./style.scss";
 
 const Slider = () => {
-  const {...data } = useData();
+  const {data } = useData();
   const [index, setIndex] = useState(0);
   // inverser l'opérateur de tri, si condition validée
-  const byDateDesc = data.data?.focus.sort((evtA, evtB) =>
+  const byDateDesc = data?.focus.sort((evtA, evtB) =>
     new Date(evtA.date) < new Date(evtB.date) ? -1 : 0
   );
   const nextCard = () => {
     setTimeout(
-      () => setIndex(index < byDateDesc.length - 1 ? index + 1 : 0),
+      () => setIndex(index < byDateDesc?.length - 1 ? index + 1 : 0),
       5000
     );
   };
