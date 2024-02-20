@@ -117,10 +117,9 @@ const Page = () => {
       <div className="col presta">
         <h3>Notre derniére prestation</h3>
           <EventCard
-          // Ajout du nullish operator pour supprimer l'erreur dans la console, concernant la props undefined
-          imageSrc={last?.cover ?? ""}
-          imageAlt={last?.description ?? ""} // Ajout props attribut image
-          title={last?.title ?? ""}
+          imageSrc={last?.cover}
+          imageAlt={last?.description } // Ajout props attribut image
+          title={last?.title}
           date={new Date(last?.date)}
           small
           label="boom"
