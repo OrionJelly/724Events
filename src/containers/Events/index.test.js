@@ -37,7 +37,7 @@ const data = {
   ],
 };
 
-describe("When Events is created", () => {
+describe("When EventList is created", () => {
   it("a list of event card is displayed", async () => {
     api.loadData = jest.fn().mockReturnValue(data);
     render(
